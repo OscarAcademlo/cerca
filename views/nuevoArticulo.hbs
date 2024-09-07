@@ -1,0 +1,16 @@
+<h1>Agregar Nuevo Artículo</h1>
+<form action="/articulos/nuevo" method="post" enctype="multipart/form-data">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" required>
+  </div>
+  <div>
+    <label for="imagen">Imagen:</label>
+    <input type="file" name="imagen" id="imagen" required>
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio" id="precio" required>
+  </div>
+  <button type="submit">Crear Artículo</button>
+</form>

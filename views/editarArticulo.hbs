@@ -1,0 +1,21 @@
+<h1>Editar Artículo</h1>
+<form action="/articulos/editar/{{articulo.id}}" method="post" enctype="multipart/form-data">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="{{articulo.nombre}}" required>
+  </div>
+  <div>
+    <label for="imagen">Imagen Actual:</label>
+    <img src="{{articulo.imagen}}" alt="{{articulo.nombre}}" width="100">
+    <input type="hidden" name="imagenActual" value="{{articulo.imagen}}">
+  </div>
+  <div>
+    <label for="imagen">Nueva Imagen (opcional):</label>
+    <input type="file" name="imagen" id="imagen">
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio" id="precio" value="{{articulo.precio}}" required>
+  </div>
+  <button type="submit">Guardar Cambios</button>
+</form>

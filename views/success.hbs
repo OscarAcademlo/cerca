@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correo Enviado</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        // Redireccionar al home después de 3 segundos
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 3000);
+    </script>
+</head>
+<body>
+    <!-- Modal de éxito -->
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;" aria-labelledby="modalExitoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalExitoLabel">Correo Enviado</h5>
+                </div>
+                <div class="modal-body">
+                    <p>El correo se envió correctamente. Espere unos segundos y será redirigido al inicio...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/'">Volver al Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

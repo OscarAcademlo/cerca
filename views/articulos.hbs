@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Artículos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Administrar Artículos</h1>
+        <a href="/articulos/nuevo" class="btn btn-primary mb-3">Agregar Nuevo Artículo</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each articulos}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.nombre}}</td>
+                    <td><img src="{{this.imagen}}" alt="{{this.nombre}}" width="100"></td>
+                    <td>{{this.precio}}</td>
+                    <td>
+                        <a href="/articulos/editar/{{this.id}}" class="btn btn-warning">Editar</a>
+                        <a href="/articulos/eliminar/{{this.id}}" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
